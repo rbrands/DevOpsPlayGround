@@ -15,12 +15,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      $globaljson = '{"sdk": {"version": "3.0.100-preview"}}';
-      $globaljson | out-file $(globaljsonPath) -Encoding UTF8
 - task: UseDotNet@2
   displayName: 'Use dotnet sdk 3.x'
   inputs:
