@@ -51,3 +51,6 @@ steps:
     ResourceGroupName: 'RB-PD-RGP-001'
     SlotName: 'dev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
+    RemoveAdditionalFilesFlag: true
