@@ -46,3 +46,16 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'MSDNAzure(8112f8e4-1adf-4e4f-ad90-aa7010a26cf4)'
+    appType: 'webApp'
+    WebAppName: 'DevOpsPlayGround'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'RB-PD-RGP-001'
+    SlotName: 'dev'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    enableCustomDeployment: true
+    DeploymentType: 'webDeploy'
