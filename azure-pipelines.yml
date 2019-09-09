@@ -49,7 +49,7 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'RB-PD-RGP-001'
     SlotName: 'dev'
-    packageForLinux: '$($(build.artifactStagingDirectory)\WebApp.zip'
+    packageForLinux: '$(build.artifactStagingDirectory)\WebApp.zip'
     enableCustomDeployment: true
     DeploymentType: 'webDeploy'
 
